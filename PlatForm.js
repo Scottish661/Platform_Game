@@ -20,14 +20,16 @@ let PlatForms = [
     new PlatForm(500, 444,10,70),
     new PlatForm(900, 444,10,70)
 ]
-function Pl_loop() {
-	pen.clearRect(0,0,canvas.width,canvas.height)
-    for (let platform of PlatForms)
-    {
-        platform.update()
+function gameLoop() {
+    pen.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let platform of PlatForms) {
+        platform.update();
     }
 
-    requestAnimationFrame(Pl_loop)
+    player1.update();
+
+    requestAnimationFrame(gameLoop);
 }
 
-Pl_loop()
+gameLoop();
