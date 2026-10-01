@@ -44,7 +44,7 @@ class Player {
 }
 let player1 = new Player(50, 360)
 function Player_loop() {
-	pen.clearRect(0, 0, CS, CS)2
+	pen.clearRect(0, 0, CS, CS)
 	player1.update()
 	requestAnimationFrame(Player_loop)
 }
